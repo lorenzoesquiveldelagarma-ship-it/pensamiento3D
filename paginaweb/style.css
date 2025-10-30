@@ -1,0 +1,235 @@
+/* ==============================================
+   ESTILOS MEJORADOS PARA PORTAFOLIO DE INGENIERÍA
+   ============================================== */
+
+/* --- Variables Globales y Estilos Base --- */
+:root {
+    --color-primario: #0d2c4b;
+    --color-acento: #007bff;
+    --color-fondo: #f8f9fa;
+    --color-texto: #343a40;
+    --color-blanco: #ffffff;
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --sombra-elevada: 0 8px 20px rgba(0, 0, 0, 0.12);
+    --radio-borde: 10px;
+    --transicion-suave: all 0.3s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+/* --- Encabezado y Navegación --- */
+.site-header {
+    background-color: var(--color-blanco);
+    border-bottom: 1px solid #e9ecef;
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+.site-header nav a {
+    color: var(--color-texto);
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    position: relative;
+    transition: var(--transicion-suave);
+}
+
+.site-header nav a:hover {
+    color: var(--color-acento);
+    background-color: #e9ecef;
+}
+
+.site-header nav a.active {
+    color: var(--color-primario);
+    font-weight: 700;
+}
+
+.site-header nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 12px;
+    right: 12px;
+    height: 3px;
+    background-color: var(--color-acento);
+    border-radius: 2px;
+}
+
+/* --- Estructura Principal y Tarjetas (Cards) --- */
+.card {
+    background-color: var(--color-blanco);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
+    border: 1px solid #e9ecef;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 2.2rem;
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-acento);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.card a {
+    color: var(--color-acento);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* --- Sección de Proyectos --- */
+#proyectos h2 {
+    text-align: center;
+    border-bottom: none;
+    margin-bottom: 40px;
+}
+
+/* --- CAMBIO CLAVE: Dejamos de usar Grid para una sola columna --- */
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra las tarjetas en la página */
+    gap: 30px; /* Espacio vertical entre cada tarjeta */
+}
+
+.project-card {
+    background-color: var(--color-blanco);
+    padding: 25px;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion-suave);
+    border: 1px solid #e9ecef;
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* La tarjeta ocupa el espacio disponible */
+    max-width: 750px; /* Ancho máximo para legibilidad en pantallas grandes */
+    box-sizing: border-box;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-elevada);
+}
+
+.project-card .card-content {
+    flex-grow: 1;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: var(--color-primario);
+}
+
+.project-card h4 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: var(--color-primario);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-card a {
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* --- Visor de Tinkercad Responsivo --- */
+.tinkercad-embed-container {
+    position: relative;
+    padding-bottom: 62.5%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.tinkercad-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Página de Contacto --- */
+#contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contacto li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+#contacto li:last-child {
+    border-bottom: none;
+}
+
+/* --- Pie de Página --- */
+.site-footer {
+    background-color: #e9ecef;
+    color: #6c757d;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 40px;
+}

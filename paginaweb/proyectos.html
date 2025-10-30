@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - Lorenzo Esquivel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>Lorenzo Esquivel de la Garma | Portafolio Académico</h1>
+            <nav>
+                <a href="index.html">Sobre Mí</a>
+                <a href="proyectos.html" class="active">Proyectos</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
+            <div id="lista-proyectos" class="project-grid">
+                
+                <article class="project-card">
+                    <div class="card-content">
+                        <h3>Fabricación y Ensamble de PCB</h3>
+                        <p>Diseño y fabricación de una Placa de Circuito Impreso (PCB) personalizada. El diseño se realizó utilizando <strong>EasyEDA</strong>, grabado en una placa de cobre con una fresadora <strong>LPKF</strong> y finalizado con la soldadura de todos los componentes.</p>
+                        
+                        <h4>Placa Fresada</h4>
+                        <img src="pcb-cobre-fresado.jpeg" alt="Placa de circuito impreso de cobre fresada">
+                        
+                        <h4>PCB Ensamblado</h4>
+                        <img src="pcb-ensamblado.jpeg" alt="Placa de circuito impreso con componentes soldados">
+                        
+                        <h4>Diseño en Tinkercad</h4>
+                        <p>Se diseño en Tinkercad para mayor claridad primero. Puedes interactuar con el modelo aquí:</p>
+                        <div class="tinkercad-embed-container">
+                            <iframe width="100%" height="453" src="https://www.tinkercad.com/embed/jgeGDkUaO5Z?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                        </div>
+                    </div>
+                    <a href="https://github.com/lorenzoesquiveldelagarma-ship-it" target="_blank">Ver Más</a>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-content">
+                        <h3>Corte Láser</h3>
+                        <p>Fabricación de componentes de precisión utilizando una cortadora láser para crear piezas ensamblables a partir de un diseño digital.</p>
+                        <img src="proyecto-diseno-3d.jpeg" alt="Piezas de madera cortadas con láser">
+                    </div>
+                    <a href="https://github.com/lorenzoesquiveldelagarma-ship-it" target="_blank">Ver Más</a>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-content">
+                        <h3>Diseño 3D con Tinkercad</h3>
+                        <p>Modelado de un objeto tridimensional utilizando <strong>Tinkercad</strong>. El diseño fue concebido para ser funcional y fabricable mediante una impresora 3D de filamento. Puedes interactuar con el modelo a continuación.</p>
+                        <div class="tinkercad-embed-container">
+                            <iframe width="100%" height="453" src="https://www.tinkercad.com/embed/gVpCcY4zOhj?editbtn=1&simlab=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                        </div>
+                    </div>
+                    <a href="https://github.com/lorenzoesquiveldelagarma-ship-it" target="_blank">Ver Más</a>
+                </article>
+
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Lorenzo Esquivel de la Garma. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
